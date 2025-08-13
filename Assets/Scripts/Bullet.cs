@@ -7,12 +7,13 @@ public class Bullet : MonoBehaviour
 
     void Start()
     {
+        // Destroi o projétil após 3 segundos para evitar que ele fique no jogo indefinidamente
         Destroy(gameObject, 3f);
     }
 
-    // Update is called once per frame
     void Update()
     {
+        // Move o projétil na direção especificada (por padrão é pra cima) a uma velocidade constante
         transform.position += speed * Time.deltaTime * movement;
     }
 }
